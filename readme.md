@@ -6,7 +6,7 @@ Flask CRUD application with JSON
 CRUD (Create, Read, Update and Delete) application with Flask framework, storing the data in a JSON file.
 
 ## Demo
-![Preview](./mockup/preview_flask_crud.png)
+![Preview](app/static/mockup/preview_flask_crud.png)
 
 
 
