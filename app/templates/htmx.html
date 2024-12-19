@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://unpkg.com/htmx.org@2.0.3" 
+        integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" 
+        crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    
+    <title>HTMLX crash course</title>
+</head>
+<body>
+    <h1>Simple Request</h1>
+    <button 
+        hx-get="/users"
+        hx-target="#users"
+        hx-indicator="#loading"
+        class="primary" 
+    > Fetch Users</button>
+    <span class="htmx-indicator" id="loading">
+        <img src="images/loader.gif" width="50px" height="50px" alt="uploading">
+    </span>
+    <div id="users"></div>
+
+</body>
+</html>
