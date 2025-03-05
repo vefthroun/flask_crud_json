@@ -3,15 +3,16 @@ from http import client
 from flask import Flask, render_template, request, redirect, url_for
 import json
 
-# má ekki vera í gagni hér > app = Flask(__name__)
 
 @app.route("/test")
 def test():
-
     return render_template("htmx.html")
 
 @app.route("/users")
 def users():
-    return "Users"
-    #return render_template("users.html")
 
+    f = open("data/clients.json", "r")
+    clients_str = f.read()
+    all_clients = json.loads(clients_str)     
+
+    return render_template("clients.html", clients=all_clients)

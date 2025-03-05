@@ -14,15 +14,14 @@
     <title>HTMLX crash course</title>
 </head>
 <body>
-    <h1>Simple Request</h1>
+    <h1>Simple HTMX Request</h1>
     <button 
         hx-get="/users"
         hx-target="#users"
         hx-indicator="#loading"
-        class="primary" 
-    > Fetch Users</button>
+        class="primary"> Fetch Users</button>
     <span class="htmx-indicator" id="loading">
-        <img src="images/loader.gif" width="50px" height="50px" alt="uploading">
+        <img src="{{ url_for('static', filename='loader.gif') }}" width="50px" height="50px" alt="uploading">
     </span>
     <div id="users"></div>
 

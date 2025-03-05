@@ -3,7 +3,7 @@ from http import client
 from flask import Flask, render_template, request, redirect, url_for
 import json
 
-# má ekki vera í gagni hér > app = Flask(__name__)
+# > app = Flask(__name__) má ekki vera í gangi hér, routið er í __init__.py
 
 @app.route("/")
 def clients():
